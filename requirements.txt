@@ -3,3 +3,5 @@ langchain
 langgraph
 langchain-google-genai
 openpyxl
+matplotlib
+scikit-learn
