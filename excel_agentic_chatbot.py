@@ -278,7 +278,7 @@ def build_workflow(api_key: str) -> StateGraph:
 
 
 def run_chat(file_path: str, question: str, api_key: str) -> str:
-    """Convenience helper to run the full agent workflow and return only the final text."""
+    """Convenience helper that returns only the final Gemini-composed answer."""
 
     final_state = run_chat_with_details(file_path=file_path, question=question, api_key=api_key)
     return final_state["final_answer"] or "No answer generated."

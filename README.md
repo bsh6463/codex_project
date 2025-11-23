@@ -38,6 +38,10 @@ This repo demonstrates a minimal agentic chatbot for Excel analysis using Gemini
 
 Generated plot files (if requested) will be saved next to the workbook path with a `_plot.png` suffix and referenced in the final answer.
 
+## Helper API surface
+- `run_chat(file_path, question, api_key)`: runs routing → agents → Gemini aggregation and returns only the final text answer for simple scripts.
+- `run_chat_with_details(file_path, question, api_key)`: returns the full state (agent responses, selected routes, plot paths, final answer) so interactive UIs can render traces and charts.
+
 ## Streamlit cockpit (혁신 UI)
 Launch the interactive front-end with Gemini wiring, agent traces, and inline plots:
 
